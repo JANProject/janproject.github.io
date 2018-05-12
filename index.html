@@ -1,9 +1,193 @@
 <!DOCTYPE html>
 <html>
-    <head>
+  <head>
+    <title>Lavatory Logger</title>
+    <meta name="viewport" content="initial-scale = 1.0, maximum-scale = 1.0" />
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+    <meta charset="utf-8" />
+    <!--Icons-->
+    <script defer src="js/fontawesome-all.min.js"></script>
+    <!--Animations-->
+    <link rel="stylesheet" href="css/animate.min.css" type="text/css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Lavatory Logger</a>
+        </div>
+        <div class="collapse navbar-collapse" id="navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home <span class="sr-only">(current)</span></a></li>
+            <li><a href="#" id="problem-link">Problem</a></li>
+            <li><a href="#" id="solution-link">Solution</a></li>
+            <li><a href="#" id="about-us-link">About Us</a></li>
+            <li><a href="#" id="contact-link">Contact</a></li>
+            <li><a href="https://ep-web-interface-js0mmer.c9users.io">Live Example</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="jumbotron banner home-bg">
+      <h1 class="banner-text">Lavatory Logger</h1>
+    </div>
+    <div class="main container">
+      <section id="problem">
+        <h3>Problem</h3>
+        <p>The problem we have chosen to tackle with this project is the ongoing issue of vandalism in our school bathrooms which have lead to the closure of many of the school’s bathrooms, leading students to walk across campus to the nearest bathroom that is open. Cleaning the bathrooms takes too much time for the janitors and it takes too long for students to use the bathrooms during class.</p>
+      </section>
+      <section id="solution">
+        <h3>Solution</h3>
+        <p>Our solution is to implement an app for a tablet or a small scanner for students. The students will scan their ID cards when they enter and exit the room to go to the bathroom. We plan to make a prototype for a small scanner using a Raspberry Pi. The time the student leaves and returns to the classroom will be recorded and saved to a database. School administrators will have access to a website where they can look up who was in the bathroom at a certain time or when a certain person went to the bathroom. Doing this will help catch the person who is vandalizing by finding a correlation between occurrences of vandalism and who was in the bathroom at the time.</p>
+        <p>You can find a live example <a href="https://ep-web-interface-js0mmer.c9users.io">here</a>.</p>
+      </section>
+      <section id="about-us">
+        <h3>About Us</h3>
+        <div class="container">
+          <div class="row">
+            <h4>Avi Patel</h4>
+            <div class="col-md-3">
+              picture
+            </div>
+            <div class="col-md-9">
+              <p>about</p>
+            </div>
+          </div>
+          <div class="row">
+            <h4>Jacob Sommer</h4>
+            <div class="col-md-3">
+              picture
+            </div>
+            <div class="col-md-9">
+              <p>about</p>
+            </div>
+          </div>
+          <div class="row">
+            <h4>Jack LeValley</h4>
+            <div class="col-md-3">
+              picture
+            </div>
+            <div class="col-md-9">
+              <p>about</p>
+            </div>
+          </div>
+          <div class="row">
+            <h4>Nick Sacca</h4>
+            <div class="col-md-3">
+              picture
+            </div>
+            <div class="col-md-9">
+              <p>about</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="contact">
+        <h3 class="center" id="contact-text">Contact</h3>
+        <div class="flex-center">
+          <form method="POST" action="https://formspree.io/jacob.sommer@comcast.net">
+            <div class="input">
+              <input type="name" name="Name" placeholder="Your name">
+              <span class="bar"></span>
+            </div>
+            <div class="input">
+              <input type="email" name="Mail" placeholder="Your email">
+              <span class="bar"></span>
+            </div>
+            <div class="input">
+              <textarea name="Message" placeholder="Your message"></textarea>
+              <span class="bar"></span>
+            </div>
+            <button type="submit" class="send-btn btn-outline center">Send <span class="fa fa-paper-plane" aria-hidden="true"></span></button>
+          </form>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <div class="container">
+        <div class="col-sm-10 text">
+          <p>Made with <span class="fa fa-heart fa-lg" aria-hidden="true"></span><span class="sr-only">love</span> by Jacob, Avi, Nick, and Jack</p>
+        </div>
+        <div class="col-sm-2 icons">
+          <a href="https://github.com/JANProject">
+            <span class="fa-stack fa-lg">
+              <span class="fa fa-circle fa-stack-2x"></span>
+              <span class="fab fa-github fa-stack-1x"></span>
+            </span>
+            <span class="sr-only">GitHub</span>
+          </a>
+        </div>
+      </div>
+    </footer>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/theater.min.js"></script>
+    <!--Navbar-->
+    <script src="js/navbar.js"></script>
+    <!--Load Animations-->
+    <script>
+      var thingsToLoad = ["problem", "solution", "about-us", "contact"];
+      
+      window.onscroll = function() {
+        var scrollBottom = $(window).scrollTop() + $(window).height();
         
-    </head>
-    <body>
+        if($(window).width() <= 768) {
+          scrollBottom += 70;
+        }
         
-    </body>
+        for(var i = 0; i < thingsToLoad.length; i++) {
+          var element = $('#' + thingsToLoad[i]);
+          
+          if(scrollBottom > element.offset().top) {
+            element.addClass("animated slideInLeft")
+          }
+        }
+      }
+    </script>
+    <!--Scroll animations-->
+    <script>
+      $(function() {
+        $('#problem-link').on('click', (e) => {
+          e.preventDefault();
+          $('html, body').animate({
+            scrollTop: $('#problem').offset().top - $('nav').height() - 10
+          }, 500, 'linear');
+        });
+      });
+      
+      $(function() {
+        $('#solution-link').on('click', (e) => {
+          e.preventDefault();
+          $('html, body').animate({
+            scrollTop: $('#solution').offset().top - $('nav').height() - 10
+          }, 500, 'linear');
+        });
+      });
+      
+      $(function() {
+        $('#about-us-link').on('click', (e) => {
+          e.preventDefault();
+          $('html, body').animate({
+            scrollTop: $('#about-us').offset().top - $('nav').height() - 10
+          }, 500, 'linear');
+        });
+      });
+      
+      $(function() {
+        $('#contact-link').on('click', (e) => {
+          e.preventDefault();
+          $('html, body').animate({
+            scrollTop: $('#contact').offset().top - $('nav').height() - 10
+          }, 500, 'linear');
+        });
+      });
+    </script>
+  </body>
 </html>

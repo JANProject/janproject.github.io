@@ -1,0 +1,350 @@
+/* ======= */
+/* GENERAL */
+/* ======= */
+
+.center {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.colored-box {
+  background-color: #3af;
+  padding: 15px;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+}
+
+::selection {
+  background: #3af;
+}
+
+::-moz-selection {
+  background: #3af;
+}
+
+/*.main {
+  min-height: calc(100vh - 105px);
+  min-height: -webkit-calc(100vh - 105px);
+  min-height: -moz-calc(100vh - 105px);
+}
+
+@media only screen and (max-width: 768px) {
+  .main {
+    min-height: calc(100vh - 142px);
+    min-height: -webkit-calc(100vh - 142px);
+    min-height: -moz-calc(100vh - 142px);
+  }
+}*/
+
+/* ======= */
+/* BUTTONS */
+/* ======= */
+
+#home-btn {
+  width: 160px;
+}
+
+.btn-outline {
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 10px 19px;
+  text-align: center;
+  width: 100px;
+  display: block;
+  font-size: 11px;
+  text-decoration: none;
+  line-height: 100% !important;
+  margin-top: 10px !important;
+  letter-spacing: 0.8px;
+  color: #3af !important;
+  transition: all ease-in-out 0.7s;
+  -webkit-transition: all ease-in-out 0.7s;
+  -moz-transition: all ease-in-out 0.7s;
+  background-color: white;
+  border: 3px solid #3af;
+  border-radius: 25px;
+}
+
+.btn-outline:hover, .btn-outline:focus {
+  transition: all ease-in-out 0.7s;
+  -webkit-transition: all ease-in-out 0.7s;
+  -moz-transition: all ease-in-out 0.7s;
+  color: white !important;
+  background-color: #3af;
+  cursor: pointer;
+}
+
+.btn-solid {
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 10px 19px;
+  text-align: center;
+  width: 100px;
+  display: block;
+  font-size: 11px;
+  text-decoration: none !important;
+  line-height: 100% !important;
+  margin-top: 10px !important;
+  letter-spacing: 0.8px;
+  color: #3af !important;
+  background-color: white;
+  transition: all ease-in-out 0.7s;
+  -webkit-transition: all ease-in-out 0.7s;
+  -moz-transition: all ease-in-out 0.7s;
+  border: none;
+}
+
+.btn-solid:hover, .btn-solid:focus {
+  transition: all ease-in-out 0.7s;
+  -webkit-transition: all ease-in-out 0.7s;
+  -moz-transition: all ease-in-out 0.7s;
+  color: white !important;
+  background-color: #3af;
+  cursor: pointer;
+}
+
+.btn-clear {
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 10px 19px;
+  text-align: center;
+  width: 100px;
+  display: block;
+  font-size: 11px;
+  text-decoration: none !important;
+  line-height: 100% !important;
+  margin-top: 10px !important;
+  letter-spacing: 0.8px;
+  color: white !important;
+  background-color: transparent;
+  transition: all ease-in-out 0.7s;
+  -webkit-transition: all ease-in-out 0.7s;
+  -moz-transition: all ease-in-out 0.7s;
+  border: 3px solid white;
+  border-radius: 25px;
+}
+
+.btn-clear:hover, .btn-clear:focus {
+  transition: all ease-in-out 0.7s;
+  -webkit-transition: all ease-in-out 0.7s;
+  -moz-transition: all ease-in-out 0.7s;
+  color: black !important;
+  background-color: white;
+  cursor: pointer;
+}
+
+.btn-view {
+  width: 150px !important;
+}
+
+/* ===== */
+/* LINKS */
+/* ===== */
+
+a:link, a:visited {
+  color: blue;
+}
+
+.main a:hover, .main a:active, .main a:focus {
+  color: blue !important;
+}
+
+/* ====== */
+/* NAVBAR */
+/* ====== */
+
+@media only screen and (min-width: 768px) {
+  .navbar-nav {
+    height: 50px;
+    overflow: hidden;
+  }
+  
+  .navbar-nav li {
+    transition: all ease-in-out 0.2s;
+    -webkit-transition: all ease-in-out 0.2s;
+    -moz-transition: all ease-in-out 0.2s;
+    border-bottom: 5px solid #3af;
+  }
+  
+  .navbar-nav li:hover {
+    transform: translateY(-5px);
+    transition: all ease-in-out 0.2s;
+    -webkit-transition: all ease-in-out 0.2s;
+    -moz-transition: all ease-in-out 0.2s;
+  }
+}
+
+.icon-bar {
+  transition: all ease-in-out 0.2s;
+  -webkit-transition: all ease-in-out 0.2s;
+  -moz-transition: all ease-in-out 0.2s;
+}
+
+button[class='navbar-toggle'] .icon-bar {
+  transform: rotate(45deg) translate(4px, 4px);
+}
+
+button[class='navbar-toggle'] .icon-bar + .icon-bar {
+  opacity: 0;
+}
+
+button[class='navbar-toggle'] .icon-bar + .icon-bar + .icon-bar {
+  opacity: 1 !important;
+  transform: rotate(-45deg) translate(4px, -4px);
+}
+
+/* ====== */
+/* FOOTER */
+/* ====== */
+
+footer {
+  background-color: #3af;
+  padding-top: 28px;
+  padding-bottom: 20px;
+  margin-top: 20px;
+}
+
+footer p {
+  font-weight: bold;
+  padding-top: 7px;
+}
+
+footer .text, .icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media only screen and (min-width: 768px) {
+  footer .text {
+    justify-content: flex-start;
+  }
+  
+  footer .icons {
+    justify-content: flex-end;
+  }
+}
+
+.fa-heart, .fa-circle {
+  color: white;
+}
+
+.fa-github, .fa-envelope {
+  color: black;
+}
+
+/* ====== */
+/* BANNER */
+/* ====== */
+
+.home-bg {
+  background-image: url("images/");
+}
+
+.small-banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 25vh;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+}
+
+.banner {
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  font-size: 5rem !important;
+}
+
+.banner-text {
+  padding: 37vh 20vw !important;
+  width: 100% !important;
+}
+
+.banner-404-text {
+  padding: 34vh 20vw !important;
+  width: 100% !important;
+}
+
+.no-margin {
+  margin-bottom: 0 !important;
+}
+
+.cursor::after {
+  content: '|';
+  animation: blink 0.5s infinite;
+  -webkit-animation: blink 0.5s infinite;
+  -moz-animation: blink 0.5s infinite;
+}
+
+/* ===== */
+/* FORMS */
+/* ===== */
+
+input, textarea {
+  display: block;
+  padding: 5px;
+  width: 300px;
+  border: none;
+  border-bottom: 1px solid #757575;
+  max-width: 100%;
+  outline: none;
+}
+
+textarea {
+  min-height: 51px;
+  resize: vertical;
+}
+
+input:focus ~ .bar:before, input:focus ~ .bar:after,
+textarea:focus ~ .bar:before, textarea:focus ~ .bar:after {
+  width: 50%;
+  transition: 0.2s linear all;
+  -webkit-transition: 0.2s linear all;
+  -moz-transition: 0.2s linear all;
+}
+
+.input {
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.bar {
+  display: block;
+  position: relative;
+  width: 300px;
+  max-width: 100%;
+}
+
+.bar:before, .bar:after {
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  content: '';
+  background: #3af;
+  transition: 0.2s linear all;
+  -webkit-transition: 0.2s linear all;
+  -moz-transition: 0.2s linear all;
+}
+
+.bar:before {
+  left: 50%;
+}
+
+.bar:after {
+  right: 50%;
+}
+
+.send-btn {
+  width: 100px;
+}
