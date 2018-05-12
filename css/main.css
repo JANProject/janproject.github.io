@@ -19,11 +19,11 @@
 }
 
 ::selection {
-  background: #3af;
+  background: #75c5ff;
 }
 
 ::-moz-selection {
-  background: #3af;
+  background: #75c5ff;
 }
 
 /*.main {
