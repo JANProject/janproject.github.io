@@ -26,6 +26,24 @@
   background: #75c5ff;
 }
 
+.thumbnail {
+  width: 150px;
+}
+
+/* ================ */
+/* PROFILE PICTURES */
+/* ================ */
+
+.profile-picture {
+  width: 150px;
+  height: 150px;
+  border-radius: 100%;
+  background-origin: center;
+  background-position: center;
+  background-size: cover;
+  border: 5px solid #3af;
+}
+
 /*.main {
   min-height: calc(100vh - 105px);
   min-height: -webkit-calc(100vh - 105px);
