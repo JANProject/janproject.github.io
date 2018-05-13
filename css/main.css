@@ -8,11 +8,6 @@
   margin-right: auto;
 }
 
-.colored-box {
-  background-color: #3af;
-  padding: 15px;
-}
-
 .flex-center {
   display: flex;
   justify-content: center;
@@ -24,10 +19,6 @@
 
 ::-moz-selection {
   background: #75c5ff;
-}
-
-.thumbnail {
-  width: 150px;
 }
 
 /* ================ */
@@ -237,7 +228,7 @@ footer .text, .icons {
   color: white;
 }
 
-.fa-github, .fa-envelope {
+.fa-github {
   color: black;
 }
 
@@ -246,18 +237,7 @@ footer .text, .icons {
 /* ====== */
 
 .home-bg {
-  background-image: url("images/");
-}
-
-.small-banner {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 25vh;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-  background-position: center;
+  background-image: url("images/background.jpg");
 }
 
 .banner {
@@ -272,22 +252,6 @@ footer .text, .icons {
 .banner-text {
   padding: 37vh 20vw !important;
   width: 100% !important;
-}
-
-.banner-404-text {
-  padding: 34vh 20vw !important;
-  width: 100% !important;
-}
-
-.no-margin {
-  margin-bottom: 0 !important;
-}
-
-.cursor::after {
-  content: '|';
-  animation: blink 0.5s infinite;
-  -webkit-animation: blink 0.5s infinite;
-  -moz-animation: blink 0.5s infinite;
 }
 
 /* ===== */
