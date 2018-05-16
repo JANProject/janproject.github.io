@@ -152,24 +152,40 @@ a:link, a:visited {
 /* NAVBAR */
 /* ====== */
 
-@media only screen and (min-width: 768px) {
+.navbar, .active a {
+  transition: all ease-in-out 0.2s;
+  -webkit-transition: all ease-in-out 0.2s;
+  -moz-transition: all ease-in-out 0.2s;
+}
+
+@media only screen and (min-width: 927px) {
   .navbar-nav {
-    height: 50px;
-    overflow: hidden;
+    width: 81%;
   }
   
   .navbar-nav li {
-    transition: all ease-in-out 0.2s;
-    -webkit-transition: all ease-in-out 0.2s;
-    -moz-transition: all ease-in-out 0.2s;
-    border-bottom: 5px solid #3af;
+    width: 16%;
+    text-align: center;
+  }
+}
+
+@media only screen and (min-width: 927px) {
+  .navbar-nav {
+    width: 81%;
   }
   
-  .navbar-nav li:hover {
-    transform: translateY(-5px);
-    transition: all ease-in-out 0.2s;
-    -webkit-transition: all ease-in-out 0.2s;
-    -moz-transition: all ease-in-out 0.2s;
+  .navbar-nav li {
+    width: 16%;
+    text-align: center;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .navbar li:hover .tab-bar:before, .navbar li:hover .tab-bar:after {
+    width: 50%;
+    transition: 0.2s linear all;
+    -webkit-transition: 0.2s linear all;
+    -moz-transition: 0.2s linear all;
   }
 }
 
@@ -177,6 +193,32 @@ a:link, a:visited {
   transition: all ease-in-out 0.2s;
   -webkit-transition: all ease-in-out 0.2s;
   -moz-transition: all ease-in-out 0.2s;
+}
+
+.tab-bar {
+  display: block;
+  position: relative;
+  width: 100%;
+}
+
+.tab-bar:before, .tab-bar:after {
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  content: '';
+  background: #3af;
+  transition: 0.2s linear all;
+  -webkit-transition: 0.2s linear all;
+  -moz-transition: 0.2s linear all;
+}
+
+.tab-bar:before {
+  left: 50%;
+}
+
+.tab-bar:after {
+  right: 50%;
 }
 
 button[class='navbar-toggle'] .icon-bar {
@@ -238,6 +280,7 @@ footer .text, .icons {
 
 .home-bg {
   background-image: url("images/background.jpg");
+  background-color: #75c5ff !important;
 }
 
 .banner {

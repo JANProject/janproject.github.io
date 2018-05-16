@@ -26,12 +26,12 @@
         </div>
         <div class="collapse navbar-collapse" id="navbar-collapse">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Home <span class="sr-only">(current)</span></a></li>
-            <li><a href="#" id="problem-link">Problem</a></li>
-            <li><a href="#" id="solution-link">Solution</a></li>
-            <li><a href="#" id="about-us-link">About Us</a></li>
-            <li><a href="#" id="contact-link">Contact</a></li>
-            <li><a href="https://ep-web-interface-js0mmer.c9users.io">Live Example</a></li>
+            <li class="active"><a href="#">Home <span class="sr-only">(current)</span></a><span class="tab-bar"></span></li>
+            <li><a href="#" id="problem-link">Problem</a><span class="tab-bar"></span></li>
+            <li><a href="#" id="solution-link">Solution</a><span class="tab-bar"></span></li>
+            <li><a href="#" id="about-us-link">About Us</a><span class="tab-bar"></span></li>
+            <li><a href="#" id="contact-link">Contact</a><span class="tab-bar"></span></li>
+            <li><a href="https://ep-web-interface-js0mmer.c9users.io">Live Example</a><span class="tab-bar"></span></li>
           </ul>
         </div>
       </div>
@@ -76,7 +76,7 @@
               picture
             </div>
             <div class="col-md-9">
-              <p>Jack is a freshman at Dublin High School. Jack at 15 years likes to play soccer for his school and club. He is also in the engineering academy. Jack enjoys video games and socializing outside of gaming. He finds enjoyment in researching certain aspects of AI and learning about how the brain works. Jack worked on the code for the barcode scanner, bought and set up the Raspberry Pi, and completed big portions of the slides and documentation.</p>
+              <p>Jack is a freshman at Dublin High School. Jack at 15 years old likes to play soccer for his school and club. He is also in the engineering academy. Jack enjoys video games and socializing outside of gaming. He finds enjoyment in researching certain aspects of AI and learning about how the brain works. Jack worked on the code for the barcode scanner, bought and set up the Raspberry Pi, and completed big portions of the slides and documentation.</p>
             </div>
           </div>
           <div class="row">
@@ -134,9 +134,16 @@
     <script src="js/navbar.js"></script>
     <!--Load Animations-->
     <script>
+      /* global $ */
+    
       var thingsToLoad = ["problem", "solution", "about-us", "contact"];
+      var navbar = $('.navbar');
+      var active = $('.active a');
+      navbar.css('background', 'transparent');
+      navbar.css('border-color', 'transparent');
+      active.css('background', 'transparent');
       
-      window.onscroll = function() {
+      $(window).scroll(function() {
         var scrollBottom = $(window).scrollTop() + $(window).height();
         
         if($(window).width() <= 768) {
@@ -150,7 +157,17 @@
             element.addClass("animated slideInLeft")
           }
         }
-      }
+        
+        if($(window).scrollTop() > 20) {
+          navbar.css('background', '#f8f8f8');
+          navbar.css('border-color', '#e7e7e7');
+          active.css('background', 'rgb(231, 231, 231)');
+        } else {
+          navbar.css('background', 'transparent');
+          navbar.css('border-color', 'transparent');
+          active.css('background', 'transparent');
+        }
+      })
     </script>
     <!--Scroll animations-->
     <script>
