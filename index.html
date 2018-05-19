@@ -31,13 +31,47 @@
             <li><a href="#" id="solution-link">Solution</a><span class="tab-bar"></span></li>
             <li><a href="#" id="about-us-link">About Us</a><span class="tab-bar"></span></li>
             <li><a href="#" id="contact-link">Contact</a><span class="tab-bar"></span></li>
-            <li><a href="https://ep-web-interface-js0mmer.c9users.io">Live Example</a><span class="tab-bar"></span></li>
+            <li><a href="https://ep-web-interface-js0mmer.c9users.io">Live Demo</a><span class="tab-bar"></span></li>
           </ul>
         </div>
       </div>
     </nav>
-    <div class="jumbotron banner home-bg">
+    <!--
+    <div class="jumbotron banner" style="background-image: url('images/IMG_2710.jpg')">
       <h1 class="banner-text">Lavatory Logger</h1>
+    </div>-->
+    <div id="myCarousel" class = "carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+        <li data-target="#myCarousel" data-slide-to="3"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="item active">
+          <img src="images/IMG_0675.jpg" alt="Los Angeles">
+          <div class="carousel-caption">
+            <h1>Lavatory Logger</h1>
+          </div>
+        </div>
+        <div class="item">
+          <img src="images/IMG_0680.jpg" alt="Chicago">
+        </div>
+        <div class="item">
+          <img src="images/IMG_0684.jpg" alt="New York">
+        </div>
+        <div class="item">
+          <img src="images/IMG_0686.jpg" alt="New York">
+        </div>
+      </div>
+      <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#myCarousel" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right"></span>
+        <span class="sr-only">Next</span>
+      </a>
     </div>
     <div class="main container">
       <section id="problem">
@@ -47,7 +81,7 @@
       <section id="solution">
         <h3>Solution</h3>
         <p>Our solution is to implement an app for a tablet or a small scanner for students. The students will scan their ID cards when they enter and exit the room to go to the bathroom. We plan to make a prototype for a small scanner using a Raspberry Pi. The time the student leaves and returns to the classroom will be recorded and saved to a database. School administrators will have access to a website where they can look up who was in the bathroom at a certain time or when a certain person went to the bathroom. Doing this will help catch the person who is vandalizing by finding a correlation between occurrences of vandalism and who was in the bathroom at the time.</p>
-        <p>You can find a live example <a href="https://ep-web-interface-js0mmer.c9users.io">here</a>.</p>
+        <p>You can find a live demo <a href="https://ep-web-interface-js0mmer.c9users.io">here</a>.</p>
       </section>
       <section id="about-us">
         <h3>About Us</h3>
@@ -150,6 +184,8 @@
       var active = $('.active a');
       navbar.css('background', 'transparent');
       navbar.css('border-color', 'transparent');
+      $('.navbar-nav li a').css('color', '#ffffff');
+      $('.navbar-default .navbar-brand').css('color', '#ffffff');
       active.css('background', 'transparent');
       
       $(window).scroll(function() {
@@ -170,10 +206,14 @@
         if($(window).scrollTop() > 20) {
           navbar.css('background', '#f8f8f8');
           navbar.css('border-color', '#e7e7e7');
+          $('.navbar-nav li a').css('color', '#777');
+          $('.navbar-default .navbar-brand').css('color', '#777');
           active.css('background', 'rgb(231, 231, 231)');
         } else {
           navbar.css('background', 'transparent');
           navbar.css('border-color', 'transparent');
+          $('.navbar-nav li a').css('color', '#ffffff');
+          $('.navbar-default .navbar-brand').css('color', '#ffffff');
           active.css('background', 'transparent');
         }
       })

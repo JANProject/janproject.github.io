@@ -140,12 +140,12 @@
 /* LINKS */
 /* ===== */
 
-a:link, a:visited {
-  color: blue;
+.main a:link, .main a:visited {
+  color: #3af;
 }
 
 .main a:hover, .main a:active, .main a:focus {
-  color: blue !important;
+  color: #05f !important;
 }
 
 /* ====== */
@@ -277,11 +277,6 @@ footer .text, .icons {
 /* ====== */
 /* BANNER */
 /* ====== */
-
-.home-bg {
-  background-image: url("images/background.jpg");
-  background-color: #75c5ff !important;
-}
 
 .banner {
   height: 100vh;
