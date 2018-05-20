@@ -101,7 +101,6 @@
               <p>Jacob is a freshman at Dublin High. He has a passion for technology and enjoys, coding, editing videos, playing video games, and doing pretty much anything else computer related. Jacob is also a part of Dublin High's Engineering and Design Academy. He created the web interface for Lavatory Logger and this website. He is also the Project Manager.</p>
               <p><a href="https://github.com/js0mmer"><span class="fab fa-github fa-lg"></span></a> @js0mmer</p>
               <p><a href="https://jsommer.tk"><span class="fas fa-portrait fa-lg"></span> Portfolio</a></p>
-              <p></p>
             </div>
           </div>
           <div class="row">
@@ -185,6 +184,8 @@
       
       $(window).scroll(function() {
         var scrollBottom = $(window).scrollTop() + $(window).height();
+        
+        $('.carousel-inner .item').css('background-position-y', -$(window).scrollTop() / 2)
         
         if($(window).width() <= 768) {
           scrollBottom += 70;
