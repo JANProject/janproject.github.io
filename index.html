@@ -176,11 +176,15 @@
       var thingsToLoad = ["problem", "solution", "about-us", "contact"];
       var navbar = $('.navbar');
       var active = $('.active a');
+      var tab = $('.navbar-nav li a');
+      var brand = $('.navbar-default .navbar-brand');
+      
       navbar.css('background', 'transparent');
       navbar.css('border-color', 'transparent');
-      $('.navbar-nav li a').css('color', '#ffffff');
-      $('.navbar-default .navbar-brand').css('color', '#ffffff');
+      tab.css('color', '#ffffff');
+      brand.css('color', '#ffffff');
       active.css('background', 'transparent');
+      $('.carousel-inner .item').css('background-position-y', -$(window).scrollTop() / 2);
       
       $(window).scroll(function() {
         var scrollBottom = $(window).scrollTop() + $(window).height();
@@ -202,14 +206,14 @@
         if($(window).scrollTop() > 20) {
           navbar.css('background', '#f8f8f8');
           navbar.css('border-color', '#e7e7e7');
-          $('.navbar-nav li a').css('color', '#777');
-          $('.navbar-default .navbar-brand').css('color', '#777');
+          tab.css('color', '#777');
+          brand.css('color', '#777');
           active.css('background', 'rgb(231, 231, 231)');
         } else {
           navbar.css('background', 'transparent');
           navbar.css('border-color', 'transparent');
-          $('.navbar-nav li a').css('color', '#ffffff');
-          $('.navbar-default .navbar-brand').css('color', '#ffffff');
+          tab.css('color', '#ffffff');
+          brand.css('color', '#ffffff');
           active.css('background', 'transparent');
         }
       })
